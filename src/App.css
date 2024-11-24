@@ -1,5 +1,10 @@
 .App {
   text-align: center;
+  scrollbar-width: 0;
+}
+
+.ymaps-2-1-79-controls__toolbar_left {
+  display: none!important;
 }
 
 .App-logo {
