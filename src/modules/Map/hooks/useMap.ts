@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from "react"
 import ymaps from "yandex-maps"
 
-const useMap = (isLoaded: boolean, mapOptions: any) => {
+export const useMap = (isLoaded: boolean, mapOptions: any) => {
     const mapContainer = useRef<HTMLDivElement | null>(null)
     const [map, setMap] = useState<ymaps.Map | null>(null)
 
@@ -90,7 +90,7 @@ const useMap = (isLoaded: boolean, mapOptions: any) => {
     const renderCluster = () => {
         
         const clusterer = new window.ymaps.Clusterer({
-            preset: 'islands#invertedVioletClusterIcons',
+            preset: 'islands#redClusterIcons',
             groupByCoordinates: false,
             // @ts-ignore
             clusterDisableClickZoom: true,
@@ -111,7 +111,7 @@ const useMap = (isLoaded: boolean, mapOptions: any) => {
         ];
         
         const geoObjects = points.map((point, index) =>  // Используем map для создания массива geoObjects
-            new window.ymaps.Placemark(point, getPointData(index), {preset: 'islands#violetIcon'})
+            new window.ymaps.Placemark(point, getPointData(index), {preset: 'islands#redIcon'})
         );
         
         
@@ -142,7 +142,7 @@ const useMap = (isLoaded: boolean, mapOptions: any) => {
     const renderCircle = () => {
         const myCircle = new window.ymaps.Circle([
             // Координаты центра круга.
-            [55.76, 37.60],
+            [56.838011, 60.597474],
             // Радиус круга в метрах.
             10000
         ], {
@@ -189,5 +189,3 @@ const useMap = (isLoaded: boolean, mapOptions: any) => {
 
     return { mapContainer, map }
 }
-
-export default useMap

@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react"
 
-const useLoadMapScript2 = () => {
+export const useLoadMapScript2 = () => {
   const [isLoaded, setIsLoaded] = useState(false)
   const [isMapReady, setIsMapReady] = useState(false)
   
@@ -41,5 +41,3 @@ const useLoadMapScript2 = () => {
 
   return { isLoaded: isLoaded && isMapReady }
 }
-
-export default useLoadMapScript2

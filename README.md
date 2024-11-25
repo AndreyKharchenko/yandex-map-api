@@ -1,3 +1,7 @@
+# О проекте
+
+## Цель проекта: ознакомление с базовыми методами Yandex Map
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

@@ -1,13 +1,11 @@
-import React from 'react';
-import logo from './logo.svg';
 import './App.css';
-import TestMap from './modules/TestMap/TestMap';
+import { Map } from './modules';
 
 
 function App() {
   return (
     <div className="App">
-      <TestMap />
+      <Map />
     </div>
   );
 }
